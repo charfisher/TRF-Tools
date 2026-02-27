@@ -750,7 +750,7 @@ class TRFExperiment(Pipeline):
             with warnings.catch_warnings():
                 warnings.filterwarnings('ignore', 'filter_length ', RuntimeWarning)
                 for pipe in reversed(pipes):
-                    x = pipe.filter_ndvar(x, pad='edge')
+                    x = pipe.filter_ndvar(x)
 
         if name is None:
             x.name = code.string
